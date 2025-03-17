@@ -2,20 +2,17 @@ class Pattern9{
 public static void main(String[] args){
 
 int n = 5;
-
-for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= i; j++) {
-                System.out.print("{");
-                for (int k = 1; k < j; k++) {
-                    System.out.print("{");
-                }
-                for (int k = 1; k < j; k++) {
-                    System.out.print("}");
-                }
-                System.out.print("} ");
-            }
-            System.out.println();
-        }
+int a = 2 * n;
+for(int i=1; i <= a - 1;i++){
+int b = (i < n)? i : a - i;
+for(int j =1 ; j <= n - b;j++){
+System.out.print(" ");
+}
+for(int j =1; j <= b;j++){
+System.out.print("* ");
+}
+System.out.println();
+}
 
 }
 }
